@@ -1,0 +1,7 @@
+name             'azcopy'
+maintainer       'Amitraj Budhu'
+maintainer_email 'abudhu@gmail.com'
+license          'All rights reserved'
+description      'Installs/Configures azcopy'
+long_description 'Installs/Configures azcopy'
+version          '0.1.0'
