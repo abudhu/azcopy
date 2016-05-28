@@ -17,11 +17,29 @@ class Chef
       action :download do
         dotnet_installed?
         azcopy_installed?
+        download_file(
+          new_resource.key,
+          new_resource.blob,
+          new_resource.folder,
+          new_resource.file,
+          new_resource.destination,
+          new_resource.ignore_journal,
+          :download
+        )
       end
 
       action :download_if_missing do
         dotnet_installed?
         azcopy_installed?
+        download_file(
+          new_resource.key,
+          new_resource.blob,
+          new_resource.folder,
+          new_resource.file,
+          new_resource.destination,
+          new_resource.ignore_journal,
+          :download_if_missing
+        )
       end
 
     end # AZCopy

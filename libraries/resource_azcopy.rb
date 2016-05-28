@@ -8,7 +8,7 @@ class Chef
       self.resource_name = :azcopy
 
       actions :download, :download_if_missing
-      default_action :download
+      default_action :download_if_missing
 
       attribute :key, kind_of: String, default: nil
       attribute :blob, kind_of: String, default: nil
